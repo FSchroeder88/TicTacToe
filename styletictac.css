@@ -1,0 +1,155 @@
+body {
+    background-color: rgba(8, 110, 93,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+table {
+    border-collapse: collapse;
+}
+
+.table_container {
+    position: relative;
+}
+tr {
+    width: 399px;
+}
+
+td {
+    position: relative;
+    width: 133px;
+    height: 133px;
+    border: 5px solid black;
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: rgba(8, 110, 93,0.7);
+}
+
+tr:first-child td {
+    border-top: 0;
+}
+
+tr td:first-child {
+    border-left: 0;
+}
+
+table tr:last-child td {
+    border-bottom: 0;
+}
+
+table tr td:last-child {
+    border-right: 0;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 20px;
+    right: 26px;
+    bottom: 22px;
+
+}
+
+.cross {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 20px;
+    right: 26px;  
+    bottom: 22px;
+}
+
+.d-none {
+    display: none;
+}
+
+.player-icon {
+    display: flex;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.player-icon img {
+    width: 100px;
+    height: 100px;
+    margin-right: 16px;
+}
+
+.player-icon div {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+.player-inactive {
+    opacity: 0.5 ;
+}
+
+.horizontal-line {
+    height: 10px;
+    width: 410px;
+    z-index: 5;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    transform: scaleX(0.0);
+    transition: transform 400ms ease-in-out;
+}
+
+.make-rotation {
+    transform: rotate(90deg) ;
+    transform: scaleX(0.0);
+}
+
+.make-rotation-diagonale1 {
+    transform: rotate(45deg) ;
+    transform: scaleX(0.0);
+}
+
+.make-rotation-diagonale2 {
+    transform: rotate(135deg) ;
+    transform: scaleX(0.0);
+}
+
+.game-over {
+    position: absolute;
+    width: 900px;
+    z-index: 6;
+    animation: zoomIn 500ms ease-in-out;
+}
+
+@keyframes zoomIm {
+    from {
+        opacity: 0;
+        transform:scale(0)
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.restart-btn {
+    position: absolute;
+    top: 700px;
+    bottom: 100px;
+    background-color: rgb(252, 247, 240);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    z-index: 6;
+    width: 300px;
+    height: 100px;
+    font-size: 30px;
+    cursor: pointer;
+
+}
+
+.restart-btn:hover {
+    background-color: rgb(230, 189, 128);
+}
